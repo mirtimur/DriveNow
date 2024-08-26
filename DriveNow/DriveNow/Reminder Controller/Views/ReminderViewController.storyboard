@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reminder View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ReminderViewController" customModule="DriveNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bim-sR-DOa">
+                                <rect key="frame" x="16" y="68.333333333333314" width="361" height="134"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заголовок" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dex-Y1-wVc">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Текст сообщения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kjw-Di-C3K">
+                                        <rect key="frame" x="0.0" y="42" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mPI-6r-DnJ">
+                                        <rect key="frame" x="0.0" y="84.000000000000014" width="361" height="49.999999999999986"/>
+                                        <connections>
+                                            <action selector="datePickerValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="0zr-5P-cBo"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Напоминания " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2i-Tq-fCq">
+                                <rect key="frame" x="16" y="15.999999999999998" width="361" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06b-8K-dl9">
+                                <rect key="frame" x="16" y="767.66666666666663" width="361" height="34.333333333333371"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2xV-N6-3OQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b2i-Tq-fCq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Fg0-1D-b1z"/>
+                            <constraint firstItem="b2i-Tq-fCq" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="16" id="GsC-nq-v0B"/>
+                            <constraint firstItem="06b-8K-dl9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="OY0-aN-BNH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b2i-Tq-fCq" secondAttribute="trailing" constant="16" id="TC3-9y-jUk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="06b-8K-dl9" secondAttribute="trailing" constant="16" id="bPk-hU-5zF"/>
+                            <constraint firstItem="bim-sR-DOa" firstAttribute="top" secondItem="b2i-Tq-fCq" secondAttribute="bottom" constant="32" id="qaG-Tw-eWj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="06b-8K-dl9" secondAttribute="bottom" constant="16" id="tre-uT-9G9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bim-sR-DOa" secondAttribute="trailing" constant="16" id="w7G-YY-T10"/>
+                            <constraint firstItem="bim-sR-DOa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="x5j-Op-Axw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextField" destination="Kjw-Di-C3K" id="3kl-Np-sgN"/>
+                        <outlet property="datePicker" destination="mPI-6r-DnJ" id="eTV-JO-xBc"/>
+                        <outlet property="titleTextField" destination="dex-Y1-wVc" id="iU0-Ey-aK9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

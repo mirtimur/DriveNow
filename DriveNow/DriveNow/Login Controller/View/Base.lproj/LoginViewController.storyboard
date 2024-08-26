@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="DriveNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please register or sign in with a google account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBu-IL-x9j">
+                                <rect key="frame" x="16" y="78" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FR5-3X-3dg">
+                                <rect key="frame" x="16" y="189" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pP-Qo-Qxb">
+                                <rect key="frame" x="16" y="268" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-aC-lHz">
+                                <rect key="frame" x="16" y="409" width="361" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13v-1T-AgC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqM-IP-VVL">
+                                <rect key="frame" x="16" y="489" width="361" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="googleSignUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKS-xY-5g6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9pP-Qo-Qxb" secondAttribute="trailing" constant="16" id="8Ng-C6-Ruy"/>
+                            <constraint firstItem="AqM-IP-VVL" firstAttribute="top" secondItem="OyB-aC-lHz" secondAttribute="bottom" constant="45" id="Brp-3k-hu6"/>
+                            <constraint firstItem="OyB-aC-lHz" firstAttribute="top" secondItem="9pP-Qo-Qxb" secondAttribute="bottom" constant="107" id="GOv-sG-Iv9"/>
+                            <constraint firstItem="FR5-3X-3dg" firstAttribute="top" secondItem="QBu-IL-x9j" secondAttribute="bottom" constant="90" id="GZp-u6-1q7"/>
+                            <constraint firstItem="AqM-IP-VVL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Gmv-Rf-uhO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QBu-IL-x9j" secondAttribute="trailing" constant="16" id="HbL-nG-RiN"/>
+                            <constraint firstItem="QBu-IL-x9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Q7G-Ky-QZ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FR5-3X-3dg" secondAttribute="trailing" constant="16" id="S9y-Tr-Cap"/>
+                            <constraint firstItem="QBu-IL-x9j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="VSL-Cr-UYJ"/>
+                            <constraint firstItem="OyB-aC-lHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XFQ-aQ-IXA"/>
+                            <constraint firstItem="9pP-Qo-Qxb" firstAttribute="top" secondItem="FR5-3X-3dg" secondAttribute="bottom" constant="45" id="XW0-qj-WPd"/>
+                            <constraint firstItem="FR5-3X-3dg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eIa-U3-uDh"/>
+                            <constraint firstItem="9pP-Qo-Qxb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fi5-HK-xjC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OyB-aC-lHz" secondAttribute="trailing" constant="16" id="gg9-c0-qqr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AqM-IP-VVL" secondAttribute="trailing" constant="16" id="yHa-2p-KnM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="googleSignUpButton" destination="AqM-IP-VVL" id="mLX-6X-WzZ"/>
+                        <outlet property="loginTextField" destination="FR5-3X-3dg" id="Dhs-Rv-FAd"/>
+                        <outlet property="passwordTextField" destination="9pP-Qo-Qxb" id="4zQ-cN-14L"/>
+                        <outlet property="registerButton" destination="OyB-aC-lHz" id="aAJ-xs-WrP"/>
+                        <outlet property="salutationLabel" destination="QBu-IL-x9j" id="TaS-l9-MxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-2"/>
+        </scene>
+    </scenes>
+</document>

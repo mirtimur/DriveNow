@@ -1,0 +1,1 @@
+protocol RecordingHistoryViewProtocol: UIViewControllerProtocol {}
